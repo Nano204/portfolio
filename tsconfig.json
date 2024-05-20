@@ -1,7 +1,8 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
+// /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "src",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -9,11 +10,13 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "skipLibCheck": true,
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
+    "downlevelIteration": true,
     "experimentalDecorators": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
