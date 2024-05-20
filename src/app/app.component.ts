@@ -7,5 +7,4 @@ import { LayoutComponent } from './layout/layout.component';
   imports: [LayoutComponent],
   templateUrl: './app.component.html',
 })
-export class AppComponent {
-}
+export class AppComponent {}
