@@ -1,0 +1,33 @@
+<div class="d-flex p-2 mb-2 bg-main rounded">
+  <div ngbNav #nav="ngbNav" [activeId]="active" class="d-flex">
+    <ng-container
+      *ngFor="let page of pages; let last = last"
+      [ngbNavItem]="page.path"
+    >
+      <a
+        [routerLink]="page.path"
+        class="ratio-1x1 align-content-center"
+        [title]="page.title"
+      >
+        <button ngbNavLink class="btn btn-gradient-primary p-2 me-3">
+          <i-bs [name]="page.icon"></i-bs>
+        </button>
+      </a>
+      <ng-template ngbNavContent>{{ page.title }}</ng-template>
+    </ng-container>
+  </div>
+
+  <div
+    *ngIf="loading"
+    class="fs-2 ms-1 p-0 flex-grow-1 d-flex justify-content-center align-self-center"
+  >
+    <ndp-spinner class="w-25"></ndp-spinner>
+  </div>
+
+  <span
+    *ngIf="!loading"
+    [ngbNavOutlet]="nav"
+    class="fs-2 ms-1 p-0 flex-grow-1 text-center text-gradient-primary font-orbitron-regular"
+  >
+  </span>
+</div>

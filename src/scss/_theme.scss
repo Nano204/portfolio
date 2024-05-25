@@ -23,6 +23,10 @@ $custom-gradients: (
     color: $dark-gray;
     box-shadow: $primary-shadow;
   }
+  &:active {
+    color: $dark-gray !important;
+    box-shadow: $primary-shadow;
+  }
   &:disabled {
     color: white;
     border: 2px white solid;

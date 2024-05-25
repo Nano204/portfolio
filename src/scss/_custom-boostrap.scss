@@ -1,6 +1,6 @@
 // Overwrites variables
-@import './overwrites';
-@import './variables';
+@import 'overwrites';
+@import 'variables';
 
 // Configuration
 @import "bootstrap/scss/functions";
@@ -10,10 +10,10 @@
 @import "bootstrap/scss/utilities";
 
 // Customization files
-@import './background';
-@import './theme';
-@import './fonts/font-orbitron';
-@import './fonts/font-lato';
+@import 'background';
+@import 'theme';
+@import 'fonts/font-orbitron';
+@import 'fonts/font-lato';
 
 // // Layout & components
 @import "bootstrap/scss/root";
