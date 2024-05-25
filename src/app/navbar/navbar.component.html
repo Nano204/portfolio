@@ -1,0 +1,44 @@
+<div class="d-flex p-2 mb-2 bg-main rounded">
+  <div ngbNav #nav="ngbNav" [(activeId)]="active" class="d-flex">
+    <ng-container [ngbNavItem]="navbarItem.HOME">
+      <div class="ratio-1x1 align-content-center">
+        <button ngbNavLink class="btn btn-gradient-primary p-2 me-3">
+          <i-bs [name]="iconNames.House"></i-bs>
+        </button>
+      </div>
+      <ng-template ngbNavContent>Home</ng-template>
+    </ng-container>
+
+    <ng-container [ngbNavItem]="navbarItem.PROFILE">
+      <div class="ratio-1x1 align-content-center">
+        <button ngbNavLink class="btn btn-gradient-primary p-2 me-3">
+          <i-bs [name]="iconNames.PersonCircle"></i-bs>
+        </button>
+      </div>
+      <ng-template ngbNavContent>Profile</ng-template>
+    </ng-container>
+
+    <ng-container [ngbNavItem]="navbarItem.STACK">
+      <div class="ratio-1x1 align-content-center">
+        <button ngbNavLink class="btn btn-gradient-primary p-2 me-3">
+          <i-bs [name]="iconNames.Stack"></i-bs>
+        </button>
+      </div>
+      <ng-template ngbNavContent>Stack</ng-template>
+    </ng-container>
+
+    <ng-container [ngbNavItem]="navbarItem.PROJECTS">
+      <div class="ratio-1x1 align-content-center">
+        <button ngbNavLink class="btn btn-gradient-primary p-2 me-3">
+          <i-bs [name]="iconNames.JournalCode"></i-bs>
+        </button>
+      </div>
+      <ng-template ngbNavContent>Projects</ng-template>
+    </ng-container>
+  </div>
+
+  <span
+    [ngbNavOutlet]="nav"
+    class="fs-2 ms-1 p-0 flex-grow-1 bg-primary text-center text-gradient-primary font-orbitron-regular"
+  ></span>
+</div>
