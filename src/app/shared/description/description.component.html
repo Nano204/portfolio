@@ -1,0 +1,11 @@
+<div>
+  <h1 class="font-orbitron-extrabold text-gradient-primary mb-0">
+    <ng-container *ngTemplateOutlet="title ? title.template : null" />
+  </h1>
+  <h2 class="font-orbitron-regular text-gradient-primary">
+    <ng-container *ngTemplateOutlet="subtitle ? subtitle.template : null" />
+  </h2>
+  <span class="font-lato-light">
+    <ng-container *ngTemplateOutlet="content ? content.template : null" />
+  </span>
+</div>
