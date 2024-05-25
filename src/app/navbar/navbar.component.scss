@@ -1,0 +1,6 @@
+//TODO: Improve import path
+@import '../../scss/variables';
+
+.nav-link.active {
+  background: $secondary-gradient;
+}
