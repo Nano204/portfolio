@@ -1,11 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'scss/custom-boostrap';
 
-body {
-  position: absolute;
-  z-index: -1;
-  background-image: url("./assets/images/bg.png");
-  
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+
