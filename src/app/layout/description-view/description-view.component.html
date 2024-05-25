@@ -1,0 +1,19 @@
+<div class="bg-main flex-grow-1 rounded p-4">
+  <ndp-nano-dev-logo width="10rem" customClass="mb-4"></ndp-nano-dev-logo>
+
+  <router-outlet [name]="routerOutletName.DESCRIPTION"></router-outlet>
+
+  <div class="d-flex flex-grow-1 mt-4 justify-content-end">
+    <div *ngFor="let link of externalLink; let last = last">
+      <div class="ratio-1x1 align-content-center" [title]="link.address">
+        <button
+          class="btn btn-gradient-primary p-2"
+          [ngClass]="{ 'me-3': !last }"
+          (click)="goTo(link.address)"
+        >
+          <i-bs [name]="link.icon"></i-bs>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
