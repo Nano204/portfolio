@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 import { IconNamesEnum, NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
 
 import { HomeDescriptionComponent } from 'app/home/home-description/home-description.component';
 import { NanoDevLogoComponent } from 'assets/images/nano-dev-logo/nano-dev-logo.component';
-import { RouterOutletName } from 'app/shared/models/router-outlet-name.enum';
 import { ExternalLink, ExternalWeb } from './models';
 
 @Component({
@@ -13,7 +11,6 @@ import { ExternalLink, ExternalWeb } from './models';
   standalone: true,
   imports: [
     CommonModule,
-    RouterOutlet,
     NgxBootstrapIconsModule,
 
     NanoDevLogoComponent,
@@ -22,7 +19,6 @@ import { ExternalLink, ExternalWeb } from './models';
   templateUrl: './description-view.component.html',
 })
 export class DescriptionViewComponent {
-  routerOutletName = RouterOutletName;
   externalWeb = ExternalWeb;
   externalLink: ExternalLink[] = [
     {

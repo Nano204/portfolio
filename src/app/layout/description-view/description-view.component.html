@@ -1,9 +1,13 @@
-<div class="bg-main flex-grow-1 rounded p-4">
+<div
+  class="bg-main flex-grow-1 rounded p-4 h-lg-100 d-flex flex-column justify-content-between"
+>
   <ndp-nano-dev-logo width="10rem" customClass="mb-4"></ndp-nano-dev-logo>
 
-  <router-outlet [name]="routerOutletName.DESCRIPTION"></router-outlet>
+  <div class="flex-grow-1 align-middle align-content-center">
+    <ng-content></ng-content>
+  </div>
 
-  <div class="d-flex flex-grow-1 mt-4 justify-content-end">
+  <div class="d-flex flex-grow-0 mt-4 justify-content-end">
     <div *ngFor="let link of externalLink; let last = last">
       <div class="ratio-1x1 align-content-center" [title]="link.address">
         <button
