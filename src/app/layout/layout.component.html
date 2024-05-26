@@ -1,13 +1,17 @@
 <div class="layout font-lato-regular text-light">
-  <div class="container-xxl my-2">
-    <div class="row mx-md-4 my-lg-3">
-      <div class="d-flex flex-column h-100 col-lg-6 pe-lg-0">
+  <div class="container-xxl py-2 h-lg-100">
+    <div class="row mx-md-4 py-lg-3 h-lg-100">
+      <div class="d-flex flex-column h-lg-100 col-lg-6 pe-lg-0 mb-2 mb-lg-0">
         <ndp-navbar></ndp-navbar>
-        <ndp-description-view></ndp-description-view>
+        <ndp-description-view class="h-lg-100">
+          <router-outlet [name]="routerOutletName.DESCRIPTION"></router-outlet>
+        </ndp-description-view>
       </div>
 
-      <div class="col-lg-6">
-        <div class="h-100 bg-main-transparent rounded">test</div>
+      <div class="col-lg-6 h-lg-100">
+        <div class="h-lg-100 bg-main-transparent rounded p-3">
+          <router-outlet [name]="routerOutletName.DETAILS"></router-outlet>
+        </div>
       </div>
     </div>
   </div>

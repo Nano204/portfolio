@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { DescriptionViewComponent } from 'app/layout/description-view/description-view.component';
 
 import { NavbarComponent } from 'app/layout/navbar/navbar.component';
+import { RouterOutletName } from 'app/shared/models/router-outlet-name.enum';
 import { NanoDevLogoComponent } from 'assets/images/nano-dev-logo/nano-dev-logo.component';
 
 @Component({
@@ -18,4 +19,6 @@ import { NanoDevLogoComponent } from 'assets/images/nano-dev-logo/nano-dev-logo.
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',
 })
-export class LayoutComponent {}
+export class LayoutComponent {
+  routerOutletName = RouterOutletName
+}
