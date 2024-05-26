@@ -14,6 +14,14 @@ export const routes: Routes = [
           ),
         outlet: RouterOutletName.DESCRIPTION,
       },
+      {
+        path: '',
+        loadComponent: () =>
+          import('./home/home-details/home-details.component').then(
+            (component) => component.HomeDetailsComponent,
+          ),
+        outlet: RouterOutletName.DETAILS,
+      },
     ],
   },
   {
