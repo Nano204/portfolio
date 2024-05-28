@@ -3,12 +3,25 @@ $custom-gradients: (
   'secondary': $secondary-gradient,
 );
 
+$custom-colors: (
+  'mint-light': $mint-light,
+  'leaf': $leaf,
+);
+
+$theme-colors: map-merge($custom-colors, $theme-colors);
+
 .bg-main {
   background-color: $dark-gray;
 }
 
 .bg-main-transparent {
   background-color: $dark-gray-transparent;
+}
+
+.overflow-scroll-y {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: $mint-light transparent;
 }
 
 .btn.btn-gradient-primary {
