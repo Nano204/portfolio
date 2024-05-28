@@ -36,6 +36,14 @@ export const routes: Routes = [
           ).then((component) => component.ProfileDescriptionComponent),
         outlet: RouterOutletName.DESCRIPTION,
       },
+      {
+        path: '',
+        loadComponent: () =>
+          import('./profile/profile-details/profile-details.component').then(
+            (component) => component.ProfileDetailsComponent,
+          ),
+        outlet: RouterOutletName.DETAILS,
+      },
     ],
   },
   {
