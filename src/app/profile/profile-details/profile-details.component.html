@@ -1,0 +1,27 @@
+<ng-container>
+  <div class="mb-3">
+    <h2 class="font-orbitron-regular text-gradient-primary">Experience</h2>
+
+    <div
+      *ngFor="let details of experienceDetails; let last = last"
+      [ngClass]="{ 'mb-2': !last }"
+    >
+      <ndp-experience-details
+        [experienceDetails]="details"
+      ></ndp-experience-details>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="font-orbitron-regular text-gradient-primary">Education</h2>
+
+    <div
+      *ngFor="let details of academicDetails; let last = last"
+      [ngClass]="{ 'mb-2': !last }"
+    >
+      <ndp-academic-details
+        [academicDetails]="details"
+      ></ndp-academic-details>
+    </div>
+  </div>
+</ng-container>
