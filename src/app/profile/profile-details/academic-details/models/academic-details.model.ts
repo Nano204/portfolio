@@ -1,7 +1,6 @@
 export interface AcademicDetails {
-  startDate: number;
+  startDate?: number;
   finalDate: number;
   course: string;
   institution: string;
-  description: string;
 }
