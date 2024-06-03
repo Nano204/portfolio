@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'dateDescription',
 })
 export class DateDescriptionPipe implements PipeTransform {
-  transform(timestamp: number): string {
+  transform(timestamp?: number): string {
     if (timestamp === 0) {
       return 'Present';
     }
