@@ -1,0 +1,12 @@
+@import 'variables';
+
+.main-tecnology-icon {
+  font-size: 5rem;
+}
+
+.technology-icon {
+  &:hover {
+    background: $dark-gray;
+    box-shadow: $primary-shadow;
+  }
+}
