@@ -6,6 +6,7 @@ $custom-gradients: (
 $custom-colors: (
   'mint-light': $mint-light,
   'leaf': $leaf,
+  'dark-gray': $dark-gray,
 );
 
 $theme-colors: map-merge($custom-colors, $theme-colors);
