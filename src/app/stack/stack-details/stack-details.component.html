@@ -1,0 +1,29 @@
+<ng-container>
+  <h1 class="font-orbitron-bold text-gradient-primary text-center">
+    Main Technologies
+  </h1>
+
+  <div class="mt-4 mb-5 d-flex flex-wrap justify-content-center">
+    <i
+      *ngFor="let technology of mainTechnologiesIcons"
+      class="technology-icon main-tecnology-icon bg-gradient bg-dark-gray m-1 p-2 rounded  {{
+        technology.iconClass
+      }}"
+      [ngbTooltip]="technology.tooltip"
+      tooltipClass="badge bg-leaf p-2 font-orbitron-regular"
+    ></i>
+  </div>
+
+  <h2 class="font-orbitron-regular text-gradient-primary text-center">
+    Other Technologies
+  </h2>
+
+  <div class="mt-4 d-flex flex-wrap justify-content-center">
+    <i
+      *ngFor="let technology of otherTechnologiesIcons"
+      class="technology-icon fs-1 bg-gradient m-1 p-2 rounded {{ technology.iconClass }}"
+      [ngbTooltip]="technology.tooltip"
+      tooltipClass="badge bg-leaf p-2 font-orbitron-regular"
+    ></i>
+  </div>
+</ng-container>
