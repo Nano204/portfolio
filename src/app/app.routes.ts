@@ -72,6 +72,14 @@ export const routes: Routes = [
           ),
         outlet: RouterOutletName.DESCRIPTION,
       },
+      {
+        path: '',
+        loadComponent: () =>
+          import('./stack/stack-details/stack-details.component').then(
+            (component) => component.StackDetailsComponent,
+          ),
+        outlet: RouterOutletName.DETAILS,
+      },
     ],
   },
 
