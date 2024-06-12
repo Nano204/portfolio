@@ -1,5 +1,5 @@
 <div class="d-flex p-2 mb-2 bg-main rounded">
-  <div ngbNav #nav="ngbNav" [activeId]="active" class="d-flex">
+  <div ngbNav #nav="ngbNav" [activeId]="active?.path" class="d-flex">
     <ng-container
       *ngFor="let page of pages; let last = last"
       [ngbNavItem]="page.path"
@@ -13,7 +13,6 @@
           <i-bs [name]="page.icon"></i-bs>
         </button>
       </a>
-      <ng-template ngbNavContent>{{ page.title }}</ng-template>
     </ng-container>
   </div>
 
@@ -26,8 +25,8 @@
 
   <span
     *ngIf="!loading"
-    [ngbNavOutlet]="nav"
     class="fs-2 ms-1 p-0 flex-grow-1 text-center text-gradient-primary font-orbitron-regular"
   >
+    {{ active?.title }}
   </span>
 </div>

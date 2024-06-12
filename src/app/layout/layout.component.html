@@ -2,7 +2,8 @@
   <div class="container-xxl py-2 h-lg-100">
     <div class="row mx-md-4 py-lg-3 h-lg-100">
       <div class="d-flex flex-column h-lg-100 col-lg-6 pe-lg-0 mb-2 mb-lg-0">
-        <ndp-navbar></ndp-navbar>
+        <ndp-navbar *ngIf="!mobile"></ndp-navbar>
+        <ndp-burger-menu *ngIf="mobile"></ndp-burger-menu>
         <ndp-description-view class="h-lg-100">
           <router-outlet [name]="routerOutletName.DESCRIPTION"></router-outlet>
         </ndp-description-view>
