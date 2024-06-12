@@ -1,0 +1,41 @@
+<div class="d-flex-vertical p-2 m-0 bg-main fixed-top">
+  <div class="d-flex">
+    <span
+      *ngIf="!loading"
+      class="fs-2 ms-1 p-0 flex-grow-1 text-center text-gradient-primary font-orbitron-regular"
+    >
+      {{ active?.title }}
+    </span>
+
+    <div class="ratio-1x1 align-content-center">
+      <button
+        class="btn btn-gradient-primary p-2"
+        (click)="collapse.toggle()"
+        [attr.aria-expanded]="!isCollapsed"
+      >
+        <i-bs [name]="listIcon"></i-bs>
+      </button>
+    </div>
+  </div>
+
+  <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+    <ng-container *ngFor="let page of pages">
+      <div *ngIf="page.title !== active?.title" class="d-flex my-2">
+        <span
+          class="fs-2 ms-1 p-0 flex-grow-1 text-center text-gradient-primary font-orbitron-regular"
+        >
+          {{ page.title }}
+        </span>
+
+        <div class="ratio-1x1 align-content-center" [routerLink]="page.path">
+          <button
+            class="btn btn-gradient-primary p-2"
+            (click)="collapse.toggle()"
+          >
+            <i-bs [name]="page.icon"></i-bs>
+          </button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
