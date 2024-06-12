@@ -7,6 +7,7 @@ import {
   house,
   journalCode,
   linkedin,
+  list,
   personCircle,
   stack,
 } from 'ngx-bootstrap-icons';
@@ -23,6 +24,7 @@ const icons = {
   linkedin,
   personCircle,
   stack,
+  list,
 };
 
 export const appConfig: ApplicationConfig = {
