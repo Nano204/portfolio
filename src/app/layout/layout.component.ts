@@ -7,6 +7,7 @@ import { NavbarComponent } from 'app/layout/navs/navbar/navbar.component';
 import { RouterOutletName } from 'app/shared/models/router-outlet-name.enum';
 import { NanoDevLogoComponent } from 'assets/images/nano-dev-logo/nano-dev-logo.component';
 import { BurgerMenuComponent } from './navs/burger-menu/burger-menu.component';
+import { MObileContactBarComponent as MobileContactBarComponent } from './mobile-contact-bar/mobile-contact-bar.component';
 
 @Component({
   selector: 'ndp-layout',
@@ -19,6 +20,7 @@ import { BurgerMenuComponent } from './navs/burger-menu/burger-menu.component';
     BurgerMenuComponent,
     NanoDevLogoComponent,
     DescriptionViewComponent,
+    MobileContactBarComponent,
   ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',
@@ -27,11 +29,15 @@ export class LayoutComponent {
   routerOutletName = RouterOutletName;
 
   get mobile(): boolean {
-    return this.isMobile();
+    return this.getWindowSize() <= 768;
+  }
+
+  get burgerMenu(): boolean {
+    return this.getWindowSize() <= 880;
   }
 
   @HostListener('window:resize', ['$event'])
-  isMobile(): boolean {
-    return window.innerWidth <= 540;
+  getWindowSize(): number {
+    return window.innerWidth;
   }
 }
