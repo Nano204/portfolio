@@ -58,6 +58,14 @@ export const routes: Routes = [
           ).then((component) => component.ProjectsDescriptionComponent),
         outlet: RouterOutletName.DESCRIPTION,
       },
+      {
+        path: '',
+        loadComponent: () =>
+          import('./projects/projects-details/projects-details.component').then(
+            (component) => component.ProjectsDetailsComponent,
+          ),
+        outlet: RouterOutletName.DETAILS,
+      },
     ],
   },
   {
