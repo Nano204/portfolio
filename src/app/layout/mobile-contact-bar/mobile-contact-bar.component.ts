@@ -7,7 +7,7 @@ import { NanoDevLogoComponent } from 'assets/images/nano-dev-logo/nano-dev-logo.
 import { externalLinks } from '../shared';
 
 @Component({
-  selector: 'ndp-description-view',
+  selector: 'ndp-mobile-contact-bar',
   standalone: true,
   imports: [
     CommonModule,
@@ -16,9 +16,9 @@ import { externalLinks } from '../shared';
     NanoDevLogoComponent,
     HomeDescriptionComponent,
   ],
-  templateUrl: './description-view.component.html',
+  templateUrl: './mobile-contact-bar.component.html',
 })
-export class DescriptionViewComponent {
+export class MObileContactBarComponent {
   externalLinks = externalLinks;
 
   goTo(address: string): void {

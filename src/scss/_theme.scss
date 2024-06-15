@@ -58,10 +58,3 @@ $theme-colors: map-merge($custom-colors, $theme-colors);
     color: transparent;
   }
 }
-
-@media (min-width: 992px) {
-  .h-lg-100 {
-    height: 100% !important;
-    max-height: 1080px;
-  }
-}
