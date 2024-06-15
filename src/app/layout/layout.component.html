@@ -1,1 +1,29 @@
-<span>{{title}}: Working</span>
+<div class="layout font-lato-regular text-light">
+  <div class="container-xxl py-2 h-100">
+    <div
+      class="row mx-md-4 h-100"
+      [ngClass]="{ 'burger-menu-space': burgerMenu, 'py-md-3': !burgerMenu }"
+    >
+      <ndp-burger-menu *ngIf="burgerMenu"></ndp-burger-menu>
+      <div
+        *ngIf="!mobile"
+        class="d-flex flex-column h-100 col-md-6 pe-md-0 mb-2 mb-md-0"
+      >
+        <ndp-navbar *ngIf="!burgerMenu"></ndp-navbar>
+        <ndp-description-view class="h-100">
+          <router-outlet [name]="routerOutletName.DESCRIPTION"></router-outlet>
+        </ndp-description-view>
+      </div>
+
+      <div
+        class="col-md-6 h-100"
+        [ngClass]="{ 'd-flex flex-column justify-content-between': mobile }"
+      >
+        <div class="h-100 bg-main-transparent rounded p-3 overflow-scroll-y">
+          <router-outlet [name]="routerOutletName.DETAILS"></router-outlet>
+        </div>
+        <ndp-mobile-contact-bar *ngIf="mobile" class="mt-2" />
+      </div>
+    </div>
+  </div>
+</div>

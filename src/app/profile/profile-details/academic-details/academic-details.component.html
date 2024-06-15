@@ -1,0 +1,26 @@
+<div class="row bg-main rounded p-2 m-0">
+  <div class="fs-6 col-md-5 font-orbitron-regular">
+    <!-- TODO: Add badges with different colors to inform level of education course -->
+    <!-- <span
+      class="badge rounded-pill bg-leaf font-orbitron-regular mb-1"
+    >
+      Hello
+    </span> -->
+    <div class="text-uppercase">
+      {{ academicDetails.startDate | dateDescription }}
+      {{ academicDetails.startDate ? '-' : null }}
+      {{ academicDetails.finalDate | dateDescription }}
+    </div>
+  </div>
+
+  <div class="col-md-7 font-orbitron-regular text-white d-flex flex-column">
+    {{ academicDetails.course }}
+    <span class="fs-6">
+      <
+      <span class="text-mint-light">
+        {{ academicDetails.institution }}
+      </span>
+      >
+    </span>
+  </div>
+</div>

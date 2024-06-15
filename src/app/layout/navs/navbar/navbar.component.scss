@@ -1,0 +1,7 @@
+//TODO: Improve import path
+@import 'variables';
+
+.nav-link.active {
+  color: $dark-gray !important;
+  background: $secondary-gradient;
+}

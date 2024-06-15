@@ -1,0 +1,33 @@
+<div class="row bg-main rounded p-2 m-0">
+  <div class="fs-6 col-md-3 font-orbitron-regular text-uppercase">
+    {{ experienceDetails.startDate | dateDescription }}
+    -
+    {{ experienceDetails.finalDate | dateDescription }}
+  </div>
+
+  <div class="col-md-9">
+    <span class="fs-5 font-orbitron-regular text-mint-light">
+      {{ experienceDetails.role }}
+    </span>
+    <span class="fs-5 font-orbitron-regular text-mint-light text-nowrap">
+      <
+      <span class="text-white">
+        {{ experienceDetails.company }}
+      </span>
+      >
+    </span>
+
+    <p class="font-lato-light">
+      {{ experienceDetails.description }}
+    </p>
+
+    <div class="mb-1">
+      <span
+        *ngFor="let techonology of experienceDetails.stack"
+        class="fs-7 badge rounded-pill bg-leaf font-orbitron-regular p-2 px-3 mb-1 me-1"
+      >
+        {{ techonology }}
+      </span>
+    </div>
+  </div>
+</div>

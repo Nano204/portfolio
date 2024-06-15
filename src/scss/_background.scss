@@ -1,0 +1,13 @@
+html {
+  background-color: black;
+}
+
+// TODO: Check where the background should be set, here or in layout component
+body {
+  position: absolute;
+  z-index: -1;
+  background-image: url('../assets/images/bg.png');
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}

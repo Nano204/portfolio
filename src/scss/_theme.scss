@@ -1,0 +1,60 @@
+$custom-gradients: (
+  'primary': $primary-gradient,
+  'secondary': $secondary-gradient,
+);
+
+$custom-colors: (
+  'mint-light': $mint-light,
+  'leaf': $leaf,
+  'dark-gray': $dark-gray,
+);
+
+$theme-colors: map-merge($custom-colors, $theme-colors);
+
+.bg-main {
+  background-color: $dark-gray;
+}
+
+.bg-main-transparent {
+  background-color: $dark-gray-transparent;
+}
+
+.overflow-scroll-y {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: $mint-light transparent;
+}
+
+.btn.btn-gradient-primary {
+  color: $dark-gray;
+  background: $primary-gradient;
+  border: 0;
+  &:hover {
+    color: $dark-gray;
+    background: $secondary-gradient;
+  }
+  &:focus {
+    color: $dark-gray;
+    box-shadow: $primary-shadow;
+  }
+  &:active {
+    color: $dark-gray !important;
+    box-shadow: $primary-shadow;
+  }
+  &:disabled {
+    color: white;
+    border: 2px white solid;
+    background: $dark-gray;
+  }
+}
+
+@each $gradient, $value in $custom-gradients {
+  .bg-gradient-#{$gradient} {
+    background: $value;
+  }
+  .text-gradient-#{$gradient} {
+    background: $value;
+    background-clip: text;
+    color: transparent;
+  }
+}
