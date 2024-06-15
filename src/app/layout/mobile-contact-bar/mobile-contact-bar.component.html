@@ -1,0 +1,18 @@
+<div
+  class="bg-main flex-grow-1 rounded d-flex justify-content-between p-2 align-content-center"
+>
+  <ndp-nano-dev-logo width="6rem" class="align-content-center"></ndp-nano-dev-logo>
+  <div class="d-flex flex-grow-1 justify-content-end">
+    <div *ngFor="let link of externalLinks; let last = last">
+      <div class="ratio-1x1 align-content-center" [title]="link.address">
+        <button
+          class="btn btn-gradient-primary p-2"
+          [ngClass]="{ 'me-2': !last }"
+          (click)="goTo(link.address)"
+        >
+          <i-bs [name]="link.icon"></i-bs>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
