@@ -8,7 +8,7 @@ export const experienceDetails: ExperienceDetails[] = [
     role: 'Development Engineer',
     company: 'Jalasoft',
     description:
-      'VCloud Email - An application that enable users to manage their email security settings and track email-related metrics through dashboards. This application that leverages micro-frontends as its primary components.',
+      'VCloud Email - An application that enables users to manage their email security settings and track email-related metrics through dashboards. This application leverages micro-frontends as its primary components.',
     stack: [
       Technologies.TYPESCRIPT,
       Technologies.ANGULAR,
