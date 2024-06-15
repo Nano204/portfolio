@@ -20,22 +20,24 @@
 
   <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
     <ng-container *ngFor="let page of pages">
-      <div *ngIf="page.title !== active?.title" class="d-flex my-2">
+      <button
+        *ngIf="page.title !== active?.title"
+        class="btn btn-link w-100 d-flex my-2 text-decoration-none p-0"
+        [routerLink]="page.path"
+        (click)="collapse.toggle()"
+      >
         <span
           class="fs-2 ms-1 p-0 flex-grow-1 text-center text-gradient-primary font-orbitron-regular"
         >
           {{ page.title }}
         </span>
 
-        <div class="ratio-1x1 align-content-center" [routerLink]="page.path">
-          <button
-            class="btn btn-gradient-primary p-2"
-            (click)="collapse.toggle()"
-          >
+        <div class="ratio-1x1 align-content-center">
+          <button class="btn btn-gradient-primary p-2">
             <i-bs [name]="page.icon"></i-bs>
           </button>
         </div>
-      </div>
+      </button>
     </ng-container>
   </div>
 </div>
